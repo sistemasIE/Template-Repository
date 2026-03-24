@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./Assets/logo.png" alt="Integral de Empaques" width="300" />
+  <img src="./assets/logo.png" alt="Integral de Empaques" width="300" />
 </div>
 
 # Nombre del Proyecto
@@ -10,11 +10,11 @@
 
 ## Stack Tecnologico
 
-| Capa | Tecnologia |
-|------|------------|
-| **Lenguaje** | C# / Python / etc. |
-| **Runtime** | .NET 8 / Node.js / etc. |
-| **Base de datos** | SQL Server |
+| Capa              | Tecnologia              |
+| ----------------- | ----------------------- |
+| **Lenguaje**      | C# / Python / etc.      |
+| **Runtime**       | .NET 8 / Node.js / etc. |
+| **Base de datos** | SQL Server              |
 
 ---
 
@@ -53,17 +53,17 @@ TYPE_ID=10      # Tipo de tarea (10 = CAMBIO)
 
 IDs de proyectos disponibles:
 
-| ID | Proyecto |
-|----|----------|
-| 16 | DESPACHO EN LINEA |
-| 15 | ETIQUETADO PRODUCTO EN PROCESO |
-| 14 | GESTION HUMANA |
-| 13 | GENERACION IPT |
-| 12 | DESBLOQUEO DE ORDENES |
-| 11 | KARDEX |
-| 10 | Procesos Disciplinarios |
-| 9  | ALISTAMIENTO |
-| 8  | Daily Sistemas |
+| ID  | Proyecto                       |
+| --- | ------------------------------ |
+| 16  | DESPACHO EN LINEA              |
+| 15  | ETIQUETADO PRODUCTO EN PROCESO |
+| 14  | GESTION HUMANA                 |
+| 13  | GENERACION IPT                 |
+| 12  | DESBLOQUEO DE ORDENES          |
+| 11  | KARDEX                         |
+| 10  | Procesos Disciplinarios        |
+| 9   | ALISTAMIENTO                   |
+| 8   | Daily Sistemas                 |
 
 ### 4. Configurar API Key de OpenProject
 
@@ -85,18 +85,38 @@ IDs de proyectos disponibles:
 
 ```
 NOMBRE-REPO/
-├── Assets/             Logo e iconos
-├── .githooks/          Hooks de Git (post-commit → OpenProject)
-├── .openproject.conf   Configuracion del proyecto en OpenProject
-├── setup.bat           Script de configuracion inicial
-└── README.md
+├── .github/
+│   └── copilot-instructions.md   GitHub Copilot → AGENTS.md
+├── .githooks/
+│   └── post-commit               Hook post-commit → OpenProject
+├── assets/
+│   └── logo.png                  Logo de la empresa
+├── docs/                         Documentacion adicional (Modelados y demás)
+├── skills/                       Skills de Claude Code (opcional)
+├── .cursorrules                  Cursor → AGENTS.md
+├── .openproject.conf             PROJECT_ID y TYPE_ID del proyecto
+├── AGENTS.md                     Contexto central para agentes de IA
+├── CLAUDE.md                     Claude Code → AGENTS.md
+├── GEMINI.md                     Gemini → AGENTS.md
+├── README.md
+└── setup.bat                     Configuracion inicial (hooks)
 ```
 
 ---
 
 ## Desarrollo Asistido por IA
 
-Este proyecto utiliza **Claude Code** (Anthropic) como agente de IA para asistir en el desarrollo. Si el repositorio incluye archivos `CLAUDE.md`, estos contienen reglas de codigo, patrones y restricciones que el agente respeta automaticamente.
+Este proyecto esta preparado para trabajar con agentes de IA de cualquier proveedor. Toda la configuracion del proyecto se centraliza en **`AGENTS.md`**, y cada proveedor tiene su archivo que apunta ahi:
+
+| Archivo                           | Agente                                |
+| --------------------------------- | ------------------------------------- |
+| `AGENTS.md`                       | Contexto central (todos leen de aqui) |
+| `CLAUDE.md`                       | Claude Code (Anthropic)               |
+| `GEMINI.md`                       | Gemini (Google)                       |
+| `.github/copilot-instructions.md` | GitHub Copilot                        |
+| `.cursorrules`                    | Cursor                                |
+
+Para agregar contexto al proyecto, editar **`AGENTS.md`** — todos los agentes lo reciben automaticamente.
 
 ---
 
