@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./assets/logo.png" alt="Integral de Empaques" width="300" />
+  <img src="./Assets/logo.png" alt="Integral de Empaques" width="300" />
 </div>
 
 # Nombre del Proyecto
