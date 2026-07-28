@@ -18,10 +18,7 @@
 
 ---
 
-## Requisitos
-
-- [ ] Requisito 1
-- [ ] Requisito 2
+## Arquitectura
 
 ---
 
@@ -51,27 +48,6 @@ PROJECT_ID=9    # Cambiar segun proyecto
 TYPE_ID=10      # Tipo de tarea (10 = CAMBIO)
 ```
 
-IDs de proyectos disponibles:
-
-| ID  | Proyecto                       |
-| --- | ------------------------------ |
-| 16  | DESPACHO EN LINEA              |
-| 15  | ETIQUETADO PRODUCTO EN PROCESO |
-| 14  | GESTION HUMANA                 |
-| 13  | GENERACION IPT                 |
-| 12  | DESBLOQUEO DE ORDENES          |
-| 11  | KARDEX                         |
-| 10  | Procesos Disciplinarios        |
-| 9   | ALISTAMIENTO                   |
-| 8   | Daily Sistemas                 |
-
-### 4. Configurar API Key de OpenProject
-
-```powershell
-[Environment]::SetEnvironmentVariable("OPENPROJECT_API_KEY","TU_API_KEY","User")
-```
-
-> Reiniciar la terminal despues de configurar la variable.
 
 ### 5. Ejecutar el proyecto
 
@@ -101,6 +77,8 @@ NOMBRE-REPO/
 ├── README.md
 └── setup.bat                     Configuracion inicial (hooks)
 ```
+## Despliegue (CI/CD)
+
 
 ---
 
@@ -117,6 +95,13 @@ Este proyecto esta preparado para trabajar con agentes de IA de cualquier provee
 | `.cursorrules`                    | Cursor                                |
 
 Para agregar contexto al proyecto, editar **`AGENTS.md`** — todos los agentes lo reciben automaticamente.
+
+---
+## Archivos Clave
+
+---
+## Notas
+[Cosas a tener en cuenta, skills, MCP Servers, Documentaciones, etc...].
 
 ---
 
